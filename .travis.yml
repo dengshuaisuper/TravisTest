@@ -1,0 +1,13 @@
+os: linux
+language: ruby
+sudo: required
+before_install: 
+- sudo apt-get install ruby
+- gem install sinatra
+- gem install json
+- gem install activesupport
+- gem install net
+- ruby ./travis.rb
+
+script: 
+- curl -o pulls.html https://api.github.com/repos/DengShuaiSimon/xcat-core/pulls
