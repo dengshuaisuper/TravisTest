@@ -31,3 +31,6 @@ script:
 - cd ..
 - cd .travis
 - ls -a
+- cd job_stages
+- ls -a
+- cat job_stages
