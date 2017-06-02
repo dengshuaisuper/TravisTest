@@ -29,4 +29,5 @@ script:
 - pwd
 - ls -a
 - cd ..
-- cat .travis
+- cd .travis
+- ls -a
