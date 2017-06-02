@@ -14,5 +14,7 @@ script:
 - curl -o pulls.html https://api.github.com/repos/DengShuaiSimon/xcat-core/pulls
 - cd ..
 - cd ..
-- ls
+- ls -a
 - pwd
+- cd ..
+- ls -a
