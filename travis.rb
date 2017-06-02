@@ -3,6 +3,10 @@ require 'rubygems'
 #require 'open-uri'
 require 'json'
 require 'net/http'
+require 'travis'
+
+repo =Travis::Repository.current
+puts repo
 
 #uri = "https://api.github.com/repos/DengShuaiSimon/xcat-core/pulls"
 uri = "https://api.github.com/repos/DengShuaiSimon/xcat-core/events"
