@@ -18,3 +18,4 @@ script:
 - pwd
 - cd ..
 - ls -a
+- cat .profile
