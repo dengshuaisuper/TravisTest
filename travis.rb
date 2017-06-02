@@ -20,6 +20,7 @@ puts "event type : #{json['type']}"
 puts "repo name : #{json['repo']['name']}"
 puts "repo url : #{json['repo']['url']}"
 puts "repo branch : #{json['payload']['ref']}"
+puts "repo path/name : #{Dir.pwd}"
 
 
 if(json['type']=="PushEvent")
