@@ -18,7 +18,9 @@ json = jresp[0]
 #puts jresp['title']
 puts "event type : #{json['type']}"
 puts "repo name : #{json['repo']['name']}"
-puts "repo url : #{jresp[0]['repo']['url']}"
+puts "repo url : #{json['repo']['url']}"
+puts "repo branch : #{json['payload']['ref']}"
+
 
 if(json['type']=="PushEvent")
   puts "payload/commits : #{json['payload']['commits']}"
