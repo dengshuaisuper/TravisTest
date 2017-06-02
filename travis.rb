@@ -4,6 +4,7 @@ require 'rubygems'
 require 'json'
 require 'net/http'
 
+
 #uri = "https://api.github.com/repos/DengShuaiSimon/xcat-core/pulls"
 uri = "https://api.github.com/repos/DengShuaiSimon/xcat-core/events"
 resp = Net::HTTP.get_response(URI.parse(uri))
