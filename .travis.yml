@@ -23,8 +23,10 @@ script:
 - pwd
 - ls -a
 - cd ..
-- cat .travis_ci_environment.yml
-- cat .travis_packer_templates_rspec.json
+#- cat .travis_ci_environment.yml
+#- cat .travis_packer_templates_rspec.json
 - cd builds
 - pwd
 - ls -a
+- cd ..
+- cat .travis
