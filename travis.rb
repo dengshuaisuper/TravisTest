@@ -9,7 +9,7 @@ require 'net/http'
 #puts repo
 
 #uri = "https://api.github.com/repos/DengShuaiSimon/xcat-core/pulls"
-uri = "https://api.github.com/repos/DengShuaiSimon/xcat-core/events"
+uri = "https://api.github.com/repos/DengShuaiSimon/TravisTest/events"
 resp = Net::HTTP.get_response(URI.parse(uri))
 
 jresp = JSON.parse(resp.body)
