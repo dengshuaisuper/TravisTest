@@ -18,7 +18,7 @@ event_type = ENV['TRAVIS_EVENT_TYPE']
 puts event_type
 
 pull_number = "null"
-if(event_type = "pull_request")
+if(event_type == "pull_request")
   pull_number = system('echo $TRAVIS_PULL_REQUEST')
   uri = "https://api.github.com/repos/#{ower_repo}/pulls/pull_number"
   resp = Net::HTTP.get_response(URI.parse(uri))
