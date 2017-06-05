@@ -11,27 +11,27 @@ before_install:
 - ruby ./travis.rb
 
 script: 
-- curl -o pulls.html https://api.github.com/repos/DengShuaiSimon/xcat-core/pulls
-- cd ..
-- cd ..
-- ls -a
+- curl -o pulls.html https://api.github.com/repos/DengShuaiSimon/TravisTest/pulls
+#- cd ..
+#- cd ..
+#- ls -a
 - pwd
-- cd ..
-- ls -a
+#- cd ..
+#- ls -a
 #- cat build.sh
-- cd build
-- pwd
-- ls -a
-- cd ..
-#- cat .travis_ci_environment.yml
-#- cat .travis_packer_templates_rspec.json
-- cd builds
-- pwd
-- ls -a
-- cd ..
-- cd .travis
-- ls -a
-- cat job_stages
+#- cd build
+#- pwd
+#- ls -a
+#- cd ..
+##- cat .travis_ci_environment.yml
+##- cat .travis_packer_templates_rspec.json
+#- cd builds
+#- pwd
+#- ls -a
+#- cd ..
+#- cd .travis
+#- ls -a
+#- cat job_stages
 - echo $TRAVIS_BUILD_ID
 - echo $TRAVIS_EVENT_TYPE
 - echo $TRAVIS_BUILD_NUMBER
