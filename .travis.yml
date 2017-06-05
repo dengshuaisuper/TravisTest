@@ -43,5 +43,5 @@ script:
 - echo $TRAVIS_JOB_NUMBER
 - echo $TRAVIS_BRANCH
 - echo $TRAVIS_COMMIT_MESSAGE
-- git log
-- POST /repos/DengShuaiSimon/TravisTest/issues/9/comments
+- git log --format=%B -n 2
+- curl -i /repos/DengShuaiSimon/TravisTest/issues/9/comments
