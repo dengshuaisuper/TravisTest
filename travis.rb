@@ -27,9 +27,10 @@ if(event_type == "pull_request")
   resp = Net::HTTP.get_response(URI.parse(uri))
   jresp = JSON.parse(resp.body)
   puts "jresp: #{jresp}"
-  #system('curl -o html.json "#{uri}"')
-  #json = JSON.parse('./html.json')
-  #puts "json : #{json}"
+  title = jresp['title']
+  puts "title : #{title}"
+  body = jresp['body']
+  puts "body : #{body}"
 end
 
 
