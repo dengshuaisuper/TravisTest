@@ -20,7 +20,7 @@ puts event_type
 
 if(event_type == "pull_request")
   #pull_number = system('echo $TRAVIS_PULL_REQUEST')
-  pull_number = ENC['TRAVIS_PULL_REQUEST']
+  pull_number = ENV['TRAVIS_PULL_REQUEST']
   puts pull_number
   uri = "https://api.github.com/repos/#{ower_repo}/pulls/pull_number"
   puts uri
