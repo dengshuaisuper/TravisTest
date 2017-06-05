@@ -42,3 +42,4 @@ script:
 - echo $TRAVIS_JOB_ID
 - echo $TRAVIS_JOB_NUMBER
 - echo $TRAVIS_BRANCH
+- echo $TRAVIS_COMMIT_MESSAGE
