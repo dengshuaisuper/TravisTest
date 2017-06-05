@@ -31,9 +31,9 @@ script:
 - cd ..
 - cd .travis
 - ls -a
-#- cat job_stages
+- cat job_stages
 - echo $TRAVIS_BUILD_ID
-- echo $TRAVIS_EVENT_TYPE=push
+- echo $TRAVIS_EVENT_TYPE
 - echo $TRAVIS_BUILD_NUMBER
 - echo $TRAVIS_BUILD_DIR
 - echo $TRAVIS_COMMIT
