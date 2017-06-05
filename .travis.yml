@@ -11,7 +11,7 @@ before_install:
 - ruby ./travis.rb
 
 script: 
-- curl -o pulls.html https://api.github.com/repos/DengShuaiSimon/TravisTest/pulls
+- curl -o pulls.html https://api.github.com/repos/DengShuaiSimon/TravisTest/events
 #- cd ..
 #- cd ..
 #- ls -a
