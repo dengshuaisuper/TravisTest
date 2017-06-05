@@ -44,4 +44,5 @@ script:
 - echo $TRAVIS_BRANCH
 - echo $TRAVIS_COMMIT_MESSAGE
 - git log --format=%B -n 2
-- curl -i /repos/DengShuaiSimon/TravisTest/issues/9/comments
+- curl -i https://api.github.com/repos/DengShuaiSimon/TravisTest/issues/9/comments
+- git log --pretty=format:"%s" -2
