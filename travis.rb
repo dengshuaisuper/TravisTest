@@ -17,13 +17,19 @@ puts branch
 event_type = ENV['TRAVIS_EVENT_TYPE']
 puts event_type
 
-pull_number = "null"
+
 if(event_type == "pull_request")
-  pull_number = system('echo $TRAVIS_PULL_REQUEST')
+  #pull_number = system('echo $TRAVIS_PULL_REQUEST')
+  pull_number = ENC['TRAVIS_PULL_REQUEST']
+  puts pull_number
   uri = "https://api.github.com/repos/#{ower_repo}/pulls/pull_number"
+  puts uri
   resp = Net::HTTP.get_response(URI.parse(uri))
   jresp = JSON.parse(resp.body)
-  puts jresp
+  puts "jresp: #{jresp}"
+  system('curl -o html.json "#{uri}"')
+  json = JSON.parse('./html.json')
+  puts "json : #{json}"
 end
 
 
