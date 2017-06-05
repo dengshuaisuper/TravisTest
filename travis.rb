@@ -18,7 +18,7 @@ event_type = ENV['TRAVIS_EVENT_TYPE']
 puts event_type
 
 
-#if(event_type == "pull_request")
+if(event_type == "pull_request")
   #pull_number = system('echo $TRAVIS_PULL_REQUEST')
   pull_number = ENV['TRAVIS_PULL_REQUEST']
   puts pull_number
@@ -30,7 +30,7 @@ puts event_type
   #system('curl -o html.json "#{uri}"')
   #json = JSON.parse('./html.json')
   #puts "json : #{json}"
-#end
+end
 
 
 puts "-------------------------------------------------------------"
