@@ -7,7 +7,20 @@ require 'net/http'
 
 #repo =Travis::Repository.current
 #puts repo
+ower_repo = system('echo $TRAVIS_REPO_SLUG')
+branch = system('echo $TRAVIS_BRANCH')
+event_type = system('echo $TRAVIS_EVENT_TYPE')
+pull_number = "null"
+if(event_type = "pull_request")
+  pull_number = system('echo $TRAVIS_PULL_REQUEST')
+  uri = "https://api.github.com/repos/#{ower_repo}/pulls/pull_number"
+  resp = Net::HTTP.get_response(URI.parse(uri))
+  jresp = JSON.parse(resp.body)
+  puts jresp
+end
 
+
+puts "-------------------------------------------------------------"
 #uri = "https://api.github.com/repos/DengShuaiSimon/xcat-core/pulls"
 uri = "https://api.github.com/repos/DengShuaiSimon/TravisTest/events"
 resp = Net::HTTP.get_response(URI.parse(uri))
