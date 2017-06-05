@@ -18,28 +18,28 @@ event_type = ENV['TRAVIS_EVENT_TYPE']
 puts event_type
 
 
-if(event_type == "pull_request")
+#if(event_type == "pull_request")
   #pull_number = system('echo $TRAVIS_PULL_REQUEST')
   pull_number = ENV['TRAVIS_PULL_REQUEST']
   puts pull_number
-  uri = "https://api.github.com/repos/#{ower_repo}/pulls/pull_number"
+  uri = "https://api.github.com/repos/#{ower_repo}/pulls/#{pull_number}"
   puts uri
   resp = Net::HTTP.get_response(URI.parse(uri))
   jresp = JSON.parse(resp.body)
   puts "jresp: #{jresp}"
-  system('curl -o html.json "#{uri}"')
-  json = JSON.parse('./html.json')
-  puts "json : #{json}"
-end
+  #system('curl -o html.json "#{uri}"')
+  #json = JSON.parse('./html.json')
+  #puts "json : #{json}"
+#end
 
 
 puts "-------------------------------------------------------------"
 #uri = "https://api.github.com/repos/DengShuaiSimon/xcat-core/pulls"
-uri = "https://api.github.com/repos/DengShuaiSimon/TravisTest/events"
-resp = Net::HTTP.get_response(URI.parse(uri))
+uri2 = "https://api.github.com/repos/DengShuaiSimon/TravisTest/events"
+resp2 = Net::HTTP.get_response(URI.parse(uri2))
 
-jresp = JSON.parse(resp.body)
-json = jresp[0]
+jresp2 = JSON.parse(resp2.body)
+json = jresp2[0]
 
 #puts jresp['title']
 puts "event type : #{json['type']}"
